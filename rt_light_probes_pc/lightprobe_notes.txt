@@ -1,0 +1,23 @@
+Lighting Settings:
+- Realtime Global Illumination: enabled
+- Realtime Environment: enabled
+- Baked Gobal Illumination: disabled
+
+=> Generate Lighting WITHOUT the target object (to avoid light probe occlusions)
+
+Emissive Material:
+- Global Illumination: Realtime
+
+Environment (Walls):
+- Contribute Global Illumination: enabled
+- Receive Global Illumination: Lightmaps
+- Scale in Lightmap: 1e-5 (very low but not 0 - otherwise no lighting)
+- Lightmap Parameters: Default-VeryLowResolution (medium works much better! - but at lower fps)
+
+Target Object:
+- Contribute Global Illumination: enabled
+- Receive Global Illumination: Light Probes
+- Light Probes: Blend Probes
+
+=> 8 Light Probes around the object are enough
+=> more Light Probes => more Latency
